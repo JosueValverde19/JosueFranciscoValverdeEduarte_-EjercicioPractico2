@@ -11,7 +11,7 @@ import java.sql.Date;
 @Entity
 @Table(name = "reserva")
 public class Reserva {
-    
+        
     //Atributos
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
