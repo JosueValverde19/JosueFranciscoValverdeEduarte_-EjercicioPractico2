@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 
-<html lang="es" xmlns:th="http://www.thymeleaf.org"
-      xmlns="http://www.w3.org/1999/xhtml">
-    <head>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" >
+    
+    <head  th:fragment="Head" >
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <link rel="stylesheet" th:href="@{/css/Estilos.css}" />
-                </head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+        <link rel="stylesheet" th:href="@{/css/Estilos.css}" />
+    </head>
+    
                 <body>
                     
                     <!-- NavBar -->
-                    <div>
-                        <nav class="navbar">
-                            <div class="logo">
-                              <a href="#">FideFlights</a>
-                            </div>
-                            <ul class="nav-links">
-                              <li><a href="#">Vuelos</a></li>
-                              <li><a href="#">Login</a></li>
-                            </ul>
-                          </nav>
+                    <div th:fragment="NavBar">
+                      <nav class="navbar">
+                        <div class="logo">
+                          <a th:href="@{/}">FideFlights</a>
+                        </div>
+                        <ul class="nav-links">
+                          <li><a  th:href="@{/vuelos/Vuelos}">Vuelos</a></li>
+                          <li><a th:href="@{/administrado/admin}">Administrar</a></li>
+                          <li><a th:href="@{/administrador/compraTiquetes}">Compra de tiquetes</a></li>
+                          <li><a href="#">Login</a></li>
+                        </ul>
+                      </nav>
                     </div>
                     <!-- Fin del NavBar -->
+                    
+                    <!-- Fin del Setion -->
+                    <section th:fragment="Section">
+                        <div class="video-container">
+                        <div class="video-wrapper">
+                          <div class="video-title">Costa Rica</div>
+                          <iframe class="video-iframe" width="560" height="315" src="https://www.youtube.com/embed/X9O8gvddhA4?si=4vPcFC2HsUXSM5Xg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
 
-                    <div class="video-container">
-                      <div class="video-wrapper">
-                        <div class="video-title">Argentina</div>
-                        <iframe class="video-iframe" width="500" height="315" src="https://www.youtube.com/embed/Qz4wGlzxxic?si=5SxDlmTN3E_BFTdB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                      </div>
+                        <div class="video-wrapper">
+                          <div class="video-title">Irlanda</div>
+                          <iframe class="video-iframe" width="500" height="315" src="https://www.youtube.com/embed/SZ2mSFZyRcY?si=DZ7o0fYGhzTOZiv6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
 
-                      <div class="video-wrapper">
-                        <div class="video-title">Irlanda</div>
-                        <iframe class="video-iframe" width="500" height="315" src="https://www.youtube.com/embed/SZ2mSFZyRcY?si=DZ7o0fYGhzTOZiv6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div class="video-wrapper">
+                          <div class="video-title">Dominicana</div>
+                          <iframe class="video-iframe" width="500" height="315" src="https://www.youtube.com/embed/EeKf6Uy9Cjg?si=1vXP7GHCphVjTXm3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
                       </div>
-                    </div>
-                    
-                    <div class="video-wrapper">
-                        <div class="video-title">Cartagena</div>
-                        <iframe class="video-iframe" width="500" height="315" src="https://www.youtube.com/embed/OtroIDDeVideo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                      </div>
-                    </div>
-                    
-                    
+                    </section>
+                    <!-- Fin del Setion -->
+
                     <!-- Footer -->
-                    <div>
+                    <div th:fragment="Footer">
                         <footer class="footer">
                         <div class="footer-content">
                           <p>© 2023 FideFlights. Todos los derechos reservados.</p>

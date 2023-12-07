@@ -27,6 +27,9 @@ public class Vuelos {
     private Date fecha_llegada;
     private String modelo_avion;
 
+    public Vuelos() {
+    }
+
     //Constructor
     public Vuelos(Integer id, String numero_vuelo, String destino, String lugar_salida, Time hora_salida, Date fecha_salida, Date fecha_llegada, String modelo_avion) {
         this.id = id;

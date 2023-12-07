@@ -23,8 +23,13 @@ public class Cliente {
     private String nombre_usuario;
     private String contaseña;    
 
+    public Cliente() {
+    }
+
+    
+    
     //Constructor
-    public Cliente(Integer id, String nombre, String apellido, String correo, String telefono, String nombre_usuario, String contaseña) {
+    public Cliente(int id, String nombre, String apellido, String correo, String telefono, String nombre_usuario, String contaseña, String string6) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
