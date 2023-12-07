@@ -1,6 +1,7 @@
 
 package EjercicioPractico2_Josue.demo.controller;
 
+//Imports
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,8 +15,7 @@ public class ReservaController {
         return "/administrador/compraTiquetes";//Ruta Completa
     }
     
-        
-     @GetMapping("/admin")
+    @GetMapping("/admin")
     public String admin(){
         return "/administrado/admin";
     }

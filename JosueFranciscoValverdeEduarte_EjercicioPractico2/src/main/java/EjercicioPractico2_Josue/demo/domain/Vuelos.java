@@ -10,13 +10,14 @@ import java.sql.Date;
 import java.sql.Time;
 
 
-
+//Se dice que es una entidad y una tabla
 @Entity
 @Table(name = "vuelos")
 public class Vuelos {
     
     //Atributos
     @Id
+    //Se dice que tiene un id y se incrementa solo
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String destino;
@@ -27,6 +28,7 @@ public class Vuelos {
     private Date fecha_llegada;
     private String modelo_avion;
 
+    //Constructor vacio
     public Vuelos() {
     }
 

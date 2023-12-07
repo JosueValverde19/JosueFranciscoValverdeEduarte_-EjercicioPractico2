@@ -7,12 +7,14 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+//Se dice que es una entidad y una tabla
 @Entity
 @Table(name = "roles")
 public class Roles {
     
     //Atributos
     @Id
+    //Se dice que tiene un id y se incrementa solo
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String numero_vuelo;

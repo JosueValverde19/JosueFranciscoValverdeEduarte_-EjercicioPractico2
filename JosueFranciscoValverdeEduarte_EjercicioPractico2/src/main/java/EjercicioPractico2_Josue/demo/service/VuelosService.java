@@ -7,6 +7,7 @@ import java.util.Optional;
 
 public interface VuelosService {
     
+    //Metodos del CRUD
     public Vuelos save(Vuelos vuelos);
     public Optional<Vuelos>get(Integer id);
     public void update (Vuelos vuelos);

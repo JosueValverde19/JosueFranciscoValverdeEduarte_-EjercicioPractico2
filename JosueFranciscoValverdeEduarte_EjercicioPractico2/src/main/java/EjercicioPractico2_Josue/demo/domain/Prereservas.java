@@ -7,12 +7,14 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+//Se dice que es una entidad y una tabla
 @Entity
 @Table(name = "prereserva")
 public class Prereservas {
     
     //Atributos
     @Id
+    //Tiene un id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private int id_vuelo;

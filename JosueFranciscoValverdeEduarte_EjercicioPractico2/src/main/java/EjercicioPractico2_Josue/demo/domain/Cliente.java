@@ -8,12 +8,14 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 
+//Se dice que es una entidad y una tabla
 @Entity
 @Table(name = "cliente")
 public class Cliente {
     
     //atributos
     @Id
+    //Que tiene un atributo de tipo Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nombre;
@@ -26,8 +28,6 @@ public class Cliente {
     public Cliente() {
     }
 
-    
-    
     //Constructor
     public Cliente(int id, String nombre, String apellido, String correo, String telefono, String nombre_usuario, String contaseña, String string6) {
         this.id = id;

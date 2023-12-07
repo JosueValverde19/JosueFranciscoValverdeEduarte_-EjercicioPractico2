@@ -8,12 +8,14 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.sql.Date;
 
+//Se dice que es una entidad y una tabla
 @Entity
 @Table(name = "reserva")
 public class Reserva {
         
     //Atributos
     @Id
+    //Tiene un id y se incrementa solo
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private int id_vuelo;
